@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaftink grondgebruik Noaberboeren</title>
+    <style>
+        /* Stijlen voor de kaartcontainer */
+        .kaart-container {
+            position: relative;
+            width: 1100px; /* Pas aan naar wens */
+            height: 860px; /* Pas aan naar wens */
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            background-image: url('AAFTINK 240218.jpg'); /* URL naar de geconverteerde afbeelding */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        /* Stijlen voor markeringspunten */
+        .marker {
+            position: absolute;
+            width: 70px;
+            height: 20px;
+            background-color: #000; /* standaardkleur */
+              border-radius: 40%; /*Maakt de marker een cirkel */
+            cursor: pointer; /* Wijzig de cursor naar een handje om aan te geven dat het punt klikbaar is */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: white; /* kleur van de tekst */
+		text-decoration: none; /* geen onderstreping van de link */
+        }
+
+.marker a {
+    color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+        .marker.red {
+    background-color: red;
+	color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+	.marker.blue {
+    background-color: blue;
+	color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+
+        /* Stijlen voor tooltips */
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            pointer-events: none; /* Voorkomt dat de tooltip zelf wordt aangeklikt */
+            opacity: 0; /* Verberg de tooltip standaard */
+            transition: opacity 0.3s ease; /* Voeg een vloeiende overgang toe bij het tonen/verbergen van de tooltip */
+            z-index: 1000; /* Zorg ervoor dat de tooltip bovenaan ligt */
+        }
+        
+        /* Stijl voor de tooltippijl */
+        .tooltip::before {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%); /* Plaats de pijl in het midden van de tooltip */
+        }
+
+        /* Stijlen voor de link binnen de tooltip */
+        .tooltip-link {
+            color: white;
+            text-decoration: underline;
+            pointer-events: auto; /* Zorg ervoor dat de link klikbaar is */
+            display: block; /* Zorgt ervoor dat de link de hele breedte van de tooltip inneemt */
+            margin-top: 5px; /* Voegt ruimte toe tussen de tekst en de link */
+        }
+    </style>
+</head>
+<body>
+    <!-- Kaartcontainer -->
+    <div class="kaart-container">
+					 <!-- PERCEEL AAFTINK -->
+ 
+
+<!-- Markeringspunt 	Noaberboeren percelen	 -->
+
+<div class="marker blue" style="left: 	34%	; top: 	32.5%	;" data-tooltip="Perceel met groente teelt">   <a href="kaartshow Leem.html"> 	Leem	   </div> 
+
+<div class="marker" style="left: 44%; top: 49.5%;" data-tooltip="Perceel met fruitleelt, bessen , een voedselbos en een kas">   <a href="kaartshow Fruit.html">Fruit</a>   </div>
+
+<div class="marker red" style="left: 	37%	; top: 	54%	;" data-tooltip="Perceel met groente teelt, bloemen en kruiden">   <a href="kaartshow Es.html">	Es	</a>   </div>
+       
+
+
+
+		
+
+
+
+
+
+
+    
+													
+    
+
+        
+        <!-- Je kunt meer markeringspunten toevoegen door meer div-elementen toe te voegen met de class "marker" en verschillende "left" en "top" waarden -->
+        
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip">
+            <span id="tooltipLocation" class="tooltip-location"></span>
+            <a id="tooltipLink" class="tooltip-link" href="#" target="_blank"></a>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript voor tooltips -->
+    <!-- JavaScript voor tooltips -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const markers = document.querySelectorAll('.marker');
+            const tooltip = document.getElementById('tooltip');
+            const tooltipLink = document.getElementById('tooltipLink');
+            const tooltipLocation = document.getElementById('tooltipLocation');
+            let tooltipTimeout;
+
+            markers.forEach(marker => {
+                marker.addEventListener('mouseenter', (e) => {
+                    const markerRect = marker.getBoundingClientRect();
+
+                    tooltip.style.top = `${marker.offsetTop}px`;
+                    tooltip.style.left = `${marker.offsetLeft + marker.offsetWidth}px`;
+                    tooltip.style.opacity = 1;
+
+                    tooltipLocation.textContent = marker.getAttribute('data-tooltip');
+
+                    // Plaats de link naast de tooltip
+                    tooltipLink.style.top = `${marker.offsetTop}px`;
+                    tooltipLink.style.left = `${marker.offsetLeft + marker.offsetWidth + tooltip.offsetWidth}px`;
+                    tooltipLink.href = marker.getAttribute('data-link'); // Stel de link van de tooltip in op basis van de data-link attribuut van de marker
+                    clearTimeout(tooltipTimeout); // Stop de timer voor het verbergen van de tooltip als de muis weer op de marker komt
+                });
+
+                marker.addEventListener('mouseleave', () => {
+                    tooltipTimeout = setTimeout(() => {
+                        tooltip.style.opacity = 0;
+                    }, 1000); // Verberg de tooltip na 1 seconde
+                });
+            });
+
+            // Houd de tooltip zichtbaar als de muis zich binnen de tooltip bevindt
+            tooltip.addEventListener('mouseenter', () => {
+                clearTimeout(tooltipTimeout); // Stop de timer voor het verbergen van de tooltip
+            });
+
+            // Verberg de tooltip als de muis de tooltip verlaat
+            tooltip.addEventListener('mouseleave', () => {
+                tooltipTimeout = setTimeout(() => {
+                    tooltip.style.opacity = 0;
+                }, 1000); // Verberg de tooltip na 1 seconde
+            });
+        });
+    </script>
+</body>
+</html>

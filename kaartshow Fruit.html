@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit perceel grondgebruik Noaberboeren</title>
+    <style>
+        /* Stijlen voor de kaartcontainer */
+        .kaart-container {
+            position: relative;
+            width: 800px; /* Pas aan naar wens */
+            height: 1400px; /* Pas aan naar wens */
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            background-image: url('FRUIT 240218.jpg'); /* URL naar de geconverteerde afbeelding */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        /* Stijlen voor markeringspunten */
+        .marker {
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-color: #000; /* standaardkleur */
+            border-radius: 50%; /* Maakt de marker een cirkel */
+            cursor: pointer; /* Wijzig de cursor naar een handje om aan te geven dat het punt klikbaar is */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6px;
+            color: white; /* kleur van de tekst */
+		text-decoration: none; /* geen onderstreping van de link */
+        }
+
+.marker a {
+    color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+        .marker.red {
+    background-color: red;
+	color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+	.marker.blue {
+    background-color: blue;
+	color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+
+        /* Stijlen voor tooltips */
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            pointer-events: none; /* Voorkomt dat de tooltip zelf wordt aangeklikt */
+            opacity: 0; /* Verberg de tooltip standaard */
+            transition: opacity 0.3s ease; /* Voeg een vloeiende overgang toe bij het tonen/verbergen van de tooltip */
+            z-index: 1000; /* Zorg ervoor dat de tooltip bovenaan ligt */
+        }
+        
+        /* Stijl voor de tooltippijl */
+        .tooltip::before {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%); /* Plaats de pijl in het midden van de tooltip */
+        }
+
+        /* Stijlen voor de link binnen de tooltip */
+        .tooltip-link {
+            color: white;
+            text-decoration: underline;
+            pointer-events: auto; /* Zorg ervoor dat de link klikbaar is */
+            display: block; /* Zorgt ervoor dat de link de hele breedte van de tooltip inneemt */
+            margin-top: 5px; /* Voegt ruimte toe tussen de tekst en de link */
+        }
+    </style>
+</head>
+<body>
+    <!-- Kaartcontainer -->
+    <div class="kaart-container">
+					 <!-- START VAN HALF STAM PERCEEL -->
+ 
+    
+
+<div class="marker" style="left: 	35.3000%	; top: 	30.1000%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkTEST.htm	">	H8	</a>   </div>
+<div class="marker" style="left: 	35.0931%	; top: 	32.1429%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H7	</a>   </div>
+<div class="marker" style="left: 	34.8863%	; top: 	34.1857%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H6	</a>   </div>
+<div class="marker" style="left: 	34.6794%	; top: 	36.2286%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H5	</a>   </div>
+<div class="marker" style="left: 	34.4726%	; top: 	38.2714%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H4	</a>   </div>
+<div class="marker" style="left: 	34.2657%	; top: 	40.3143%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H3	</a>   </div>
+<div class="marker" style="left: 	34.0589%	; top: 	42.3571%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H2	</a>   </div>
+<div class="marker" style="left: 	33.8520%	; top: 	44.4000%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H1	</a>   </div>
+										
+<div class="marker" style="left: 	38.9500%	; top: 	30.1900%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkTEST.htm	">	H16	</a>   </div>
+<div class="marker" style="left: 	38.7431%	; top: 	32.2329%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H15	</a>   </div>
+<div class="marker" style="left: 	38.5363%	; top: 	34.2757%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H14	</a>   </div>
+<div class="marker" style="left: 	38.3294%	; top: 	36.3186%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H13	</a>   </div>
+<div class="marker" style="left: 	38.1226%	; top: 	38.3614%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H12	</a>   </div>
+<div class="marker" style="left: 	37.9157%	; top: 	40.4043%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H11	</a>   </div>
+<div class="marker" style="left: 	37.7089%	; top: 	42.4471%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H10	</a>   </div>
+<div class="marker" style="left: 	37.5020%	; top: 	44.4900%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkTEST.htm	">	H9	</a>   </div>
+										
+<div class="marker" style="left: 	43.6000%	; top: 	30.3800%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH24.htm	">	H24	</a>   </div>
+<div class="marker" style="left: 	43.3931%	; top: 	32.4229%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH23.htm	">	H23	</a>   </div>
+<div class="marker" style="left: 	43.1863%	; top: 	34.4657%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH22.htm	">	H22	</a>   </div>
+<div class="marker" style="left: 	42.9794%	; top: 	36.5086%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH21.htm	">	H21	</a>   </div>
+<div class="marker" style="left: 	42.7726%	; top: 	38.5514%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH20.htm	">	H20	</a>   </div>
+<div class="marker" style="left: 	42.5657%	; top: 	40.5943%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH19.htm	">	H19	</a>   </div>
+<div class="marker" style="left: 	42.3589%	; top: 	42.6371%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH18.htm	">	H18	</a>   </div>
+<div class="marker" style="left: 	42.1520%	; top: 	44.6800%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH17.htm	">	H17	</a>   </div>
+										
+<div class="marker" style="left: 	47.2500%	; top: 	30.4700%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH32.htm	">	H32	</a>   </div>
+<div class="marker" style="left: 	47.0431%	; top: 	32.5129%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH31.htm	">	H31	</a>   </div>
+<div class="marker" style="left: 	46.8363%	; top: 	34.5557%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH30.htm	">	H30	</a>   </div>
+<div class="marker" style="left: 	46.6294%	; top: 	36.5986%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH29.htm	">	H29	</a>   </div>
+<div class="marker" style="left: 	46.4226%	; top: 	38.6414%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH28.htm	">	H28	</a>   </div>
+<div class="marker" style="left: 	46.2157%	; top: 	40.6843%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH27.htm	">	H27	</a>   </div>
+<div class="marker" style="left: 	46.0089%	; top: 	42.7271%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH26.htm	">	H26	</a>   </div>
+<div class="marker" style="left: 	45.8020%	; top: 	44.7700%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH25.htm	">	H25	</a>   </div>
+										
+<div class="marker" style="left: 	51.9000%	; top: 	30.6600%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH40.htm	">	H40	</a>   </div>
+<div class="marker" style="left: 	51.6931%	; top: 	32.7029%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH39.htm	">	H39	</a>   </div>
+<div class="marker" style="left: 	51.4863%	; top: 	34.7457%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH38.htm	">	H38	</a>   </div>
+<div class="marker" style="left: 	51.2794%	; top: 	36.7886%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH37.htm	">	H37	</a>   </div>
+<div class="marker" style="left: 	51.0726%	; top: 	38.8314%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH36.htm	">	H36	</a>   </div>
+<div class="marker" style="left: 	50.8657%	; top: 	40.8743%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH35.htm	">	H35	</a>   </div>
+<div class="marker" style="left: 	50.6589%	; top: 	42.9171%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH34.htm	">	H34	</a>   </div>
+<div class="marker" style="left: 	50.4520%	; top: 	44.9600%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH33.htm	">	H33	</a>   </div>
+										
+<div class="marker" style="left: 	55.5500%	; top: 	30.7500%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH48.htm	">	H48	</a>   </div>
+<div class="marker" style="left: 	55.3431%	; top: 	32.7929%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH47.htm	">	H47	</a>   </div>
+<div class="marker" style="left: 	55.1363%	; top: 	34.8357%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH46.htm	">	H46	</a>   </div>
+<div class="marker" style="left: 	54.9294%	; top: 	36.8786%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH45.htm	">	H45	</a>   </div>
+<div class="marker" style="left: 	54.7226%	; top: 	38.9214%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH44.htm	">	H44	</a>   </div>
+<div class="marker" style="left: 	54.5157%	; top: 	40.9643%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH43.htm	">	H43	</a>   </div>
+<div class="marker" style="left: 	54.3089%	; top: 	43.0071%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH42.htm	">	H42	</a>   </div>
+<div class="marker" style="left: 	54.1020%	; top: 	45.0500%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH41.htm	">	H41	</a>   </div>
+										
+<div class="marker" style="left: 	60.2000%	; top: 	30.9400%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH56.htm	">	H56	</a>   </div>
+<div class="marker" style="left: 	59.9931%	; top: 	32.9829%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH55.htm	">	H55	</a>   </div>
+<div class="marker" style="left: 	59.7863%	; top: 	35.0257%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH54.htm	">	H54	</a>   </div>
+<div class="marker" style="left: 	59.5794%	; top: 	37.0686%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH53.htm	">	H53	</a>   </div>
+<div class="marker" style="left: 	59.3726%	; top: 	39.1114%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH52.htm	">	H52	</a>   </div>
+<div class="marker" style="left: 	59.1657%	; top: 	41.1543%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH51.htm	">	H51	</a>   </div>
+<div class="marker" style="left: 	58.9589%	; top: 	43.1971%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH50.htm	">	H50	</a>   </div>
+<div class="marker" style="left: 	58.7520%	; top: 	45.2400%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH49.htm	">	H49	</a>   </div>
+										
+<div class="marker" style="left: 	63.8500%	; top: 	31.0300%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH64.htm	">	H64	</a>   </div>
+<div class="marker" style="left: 	63.6431%	; top: 	33.0729%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH63.htm	">	H63	</a>   </div>
+<div class="marker" style="left: 	63.4363%	; top: 	35.1157%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH62.htm	">	H62	</a>   </div>
+<div class="marker" style="left: 	63.2294%	; top: 	37.1586%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH61.htm	">	H61	</a>   </div>
+<div class="marker" style="left: 	63.0226%	; top: 	39.2014%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH60.htm	">	H60	</a>   </div>
+<div class="marker" style="left: 	62.8157%	; top: 	41.2443%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH59.htm	">	H59	</a>   </div>
+<div class="marker" style="left: 	62.6089%	; top: 	43.2871%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH58.htm	">	H58	</a>   </div>
+<div class="marker" style="left: 	62.4020%	; top: 	45.3300%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH57.htm	">	H57	</a>   </div>
+										
+<div class="marker" style="left: 	68.5000%	; top: 	31.2200%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH72.htm	">	H72	</a>   </div>
+<div class="marker" style="left: 	68.2931%	; top: 	33.2629%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH71.htm	">	H71	</a>   </div>
+<div class="marker" style="left: 	68.0863%	; top: 	35.3057%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH70.htm	">	H70	</a>   </div>
+<div class="marker" style="left: 	67.8794%	; top: 	37.3486%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH69.htm	">	H69	</a>   </div>
+<div class="marker" style="left: 	67.6726%	; top: 	39.3914%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH68.htm	">	H68	</a>   </div>
+<div class="marker" style="left: 	67.4657%	; top: 	41.4343%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH67.htm	">	H67	</a>   </div>
+<div class="marker" style="left: 	67.2589%	; top: 	43.4771%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH66.htm	">	H66	</a>   </div>
+<div class="marker" style="left: 	67.0520%	; top: 	45.5200%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH65.htm	">	H65	</a>   </div>
+										
+<div class="marker" style="left: 	72.1500%	; top: 	31.3100%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH80.htm	">	H80	</a>   </div>
+<div class="marker" style="left: 	71.9431%	; top: 	33.3529%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH79.htm	">	H79	</a>   </div>
+<div class="marker" style="left: 	71.7363%	; top: 	35.3957%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH78.htm	">	H78	</a>   </div>
+<div class="marker" style="left: 	71.5294%	; top: 	37.4386%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH77.htm	">	H77	</a>   </div>
+<div class="marker" style="left: 	71.3226%	; top: 	39.4814%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH76.htm	">	H76	</a>   </div>
+<div class="marker" style="left: 	71.1157%	; top: 	41.5243%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH75.htm	">	H75	</a>   </div>
+<div class="marker" style="left: 	70.9089%	; top: 	43.5671%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH74.htm	">	H74	</a>   </div>
+<div class="marker" style="left: 	70.7020%	; top: 	45.6100%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH73.htm	">	H73	</a>   </div>
+										
+<div class="marker" style="left: 	76.8000%	; top: 	31.5000%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH88.htm	">	H88	</a>   </div>
+<div class="marker" style="left: 	76.5931%	; top: 	33.5429%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH87.htm	">	H87	</a>   </div>
+<div class="marker" style="left: 	76.3863%	; top: 	35.5857%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH86.htm	">	H86	</a>   </div>
+<div class="marker" style="left: 	76.1794%	; top: 	37.6286%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH85.htm	">	H85	</a>   </div>
+<div class="marker" style="left: 	75.9726%	; top: 	39.6714%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH84.htm	">	H84	</a>   </div>
+<div class="marker" style="left: 	75.7657%	; top: 	41.7143%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH83.htm	">	H83	</a>   </div>
+<div class="marker" style="left: 	75.5589%	; top: 	43.7571%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH82.htm	">	H82	</a>   </div>
+<div class="marker" style="left: 	75.3520%	; top: 	45.8000%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH81.htm	">	H81	</a>   </div>
+										
+<div class="marker" style="left: 	80.4500%	; top: 	31.5900%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH96.htm	">	H96	</a>   </div>
+<div class="marker" style="left: 	80.2431%	; top: 	33.6329%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH95.htm	">	H95	</a>   </div>
+<div class="marker" style="left: 	80.0363%	; top: 	35.6757%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH94.htm	">	H94	</a>   </div>
+<div class="marker" style="left: 	79.8294%	; top: 	37.7186%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH93.htm	">	H93	</a>   </div>
+<div class="marker" style="left: 	79.6226%	; top: 	39.7614%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH92.htm	">	H92	</a>   </div>
+<div class="marker" style="left: 	79.4157%	; top: 	41.8043%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH91.htm	">	H91	</a>   </div>
+<div class="marker" style="left: 	79.2089%	; top: 	43.8471%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH90.htm	">	H90	</a>   </div>
+<div class="marker" style="left: 	79.0020%	; top: 	45.8900%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH89.htm	">	H89	</a>   </div>
+										
+<div class="marker" style="left: 	85.1000%	; top: 	31.7800%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH104.htm	">	H104	</a>   </div>
+<div class="marker" style="left: 	84.8931%	; top: 	33.8229%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH103.htm	">	H103	</a>   </div>
+<div class="marker" style="left: 	84.6863%	; top: 	35.8657%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH102.htm	">	H102	</a>   </div>
+<div class="marker" style="left: 	84.4794%	; top: 	37.9086%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH101.htm	">	H101	</a>   </div>
+<div class="marker" style="left: 	84.2726%	; top: 	39.9514%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH100.htm	">	H100	</a>   </div>
+<div class="marker" style="left: 	84.0657%	; top: 	41.9943%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH99.htm	">	H99	</a>   </div>
+<div class="marker" style="left: 	83.8589%	; top: 	44.0371%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH98.htm	">	H98	</a>   </div>
+<div class="marker" style="left: 	83.6520%	; top: 	46.0800%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH97.htm	">	H97	</a>   </div>
+										
+<div class="marker" style="left: 	88.7500%	; top: 	31.8700%	;" data-tooltip="	Abrikozenboom Tros Oranje	">   <a href="	boomlinkH112.htm	">	H112	</a>   </div>
+<div class="marker" style="left: 	88.5431%	; top: 	33.9129%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH111.htm	">	H111	</a>   </div>
+<div class="marker" style="left: 	88.3363%	; top: 	35.9557%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH110.htm	">	H110	</a>   </div>
+<div class="marker" style="left: 	88.1294%	; top: 	37.9986%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH109.htm	">	H109	</a>   </div>
+<div class="marker" style="left: 	87.9226%	; top: 	40.0414%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH108.htm	">	H108	</a>   </div>
+<div class="marker" style="left: 	87.7157%	; top: 	42.0843%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH107.htm	">	H107	</a>   </div>
+<div class="marker" style="left: 	87.5089%	; top: 	44.1271%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH106.htm	">	H106	</a>   </div>
+<div class="marker" style="left: 	87.3020%	; top: 	46.1700%	;" data-tooltip="	Gele Kornoelje	">   <a href="	boomlinkH105.htm	">	H105	</a>   </div>
+
+
+
+ <!-- START VAN LAAGSTAM PERCEEL -->
+
+
+
+        <!-- Markeringspunt 	L12	 -->	<div class="marker blue" style="left: 	48.0000%	; top: 	48.2000%	;" data-tooltip="	laagstam	" data-link=	boomlinkL12.htm>	L12	</div>
+        <!-- Markeringspunt 	L11	 -->	<div class="marker blue" style="left: 	47.9045%	; top: 	49.2182%	;" data-tooltip="	laagstam	" data-link=	boomlinkL11.htm>	L11	</div>
+        <!-- Markeringspunt 	L10	 -->	<div class="marker blue" style="left: 	47.8091%	; top: 	50.2364%	;" data-tooltip="	laagstam	" data-link=	boomlinkL10.htm>	L10	</div>
+        <!-- Markeringspunt 	L9	 -->	<div class="marker blue" style="left: 	47.7136%	; top: 	51.2545%	;" data-tooltip="	laagstam	" data-link=	boomlinkL9.htm>	L9	</div>
+        <!-- Markeringspunt 	L8	 -->	<div class="marker blue" style="left: 	47.6182%	; top: 	52.2727%	;" data-tooltip="	laagstam	" data-link=	boomlinkL8.htm>	L8	</div>
+        <!-- Markeringspunt 	L7	 -->	<div class="marker blue" style="left: 	47.5227%	; top: 	53.2909%	;" data-tooltip="	laagstam	" data-link=	boomlinkL7.htm>	L7	</div>
+        <!-- Markeringspunt 	L6	 -->	<div class="marker blue" style="left: 	47.4273%	; top: 	54.3091%	;" data-tooltip="	laagstam	" data-link=	boomlinkL6.htm>	L6	</div>
+        <!-- Markeringspunt 	L5	 -->	<div class="marker blue" style="left: 	47.3318%	; top: 	55.3273%	;" data-tooltip="	laagstam	" data-link=	boomlinkL5.htm>	L5	</div>
+        <!-- Markeringspunt 	L4	 -->	<div class="marker blue" style="left: 	47.2364%	; top: 	56.3455%	;" data-tooltip="	laagstam	" data-link=	boomlinkL4.htm>	L4	</div>
+        <!-- Markeringspunt 	L3	 -->	<div class="marker blue" style="left: 	47.1409%	; top: 	57.3636%	;" data-tooltip="	laagstam	" data-link=	boomlinkL3.htm>	L3	</div>
+        <!-- Markeringspunt 	L2	 -->	<div class="marker blue" style="left: 	47.0455%	; top: 	58.3818%	;" data-tooltip="	laagstam	" data-link=	boomlinkL2.htm>	L2	</div>
+        <!-- Markeringspunt 	L1	 -->	<div class="marker blue" style="left: 	46.9500%	; top: 	59.4000%	;" data-tooltip="	laagstam	" data-link=	boomlinkL1.htm>	L1	</div>
+												
+        <!-- Markeringspunt 	L24	 -->	<div class="marker blue" style="left: 	49.8000%	; top: 	48.2900%	;" data-tooltip="	laagstam	" data-link=	boomlinkL24.htm>	L24	</div>
+        <!-- Markeringspunt 	L23	 -->	<div class="marker blue" style="left: 	49.7045%	; top: 	49.3082%	;" data-tooltip="	laagstam	" data-link=	boomlinkL23.htm>	L23	</div>
+        <!-- Markeringspunt 	L22	 -->	<div class="marker blue" style="left: 	49.6091%	; top: 	50.3264%	;" data-tooltip="	laagstam	" data-link=	boomlinkL22.htm>	L22	</div>
+        <!-- Markeringspunt 	L21	 -->	<div class="marker blue" style="left: 	49.5136%	; top: 	51.3445%	;" data-tooltip="	laagstam	" data-link=	boomlinkL21.htm>	L21	</div>
+        <!-- Markeringspunt 	L20	 -->	<div class="marker blue" style="left: 	49.4182%	; top: 	52.3627%	;" data-tooltip="	laagstam	" data-link=	boomlinkL20.htm>	L20	</div>
+        <!-- Markeringspunt 	L19	 -->	<div class="marker blue" style="left: 	49.3227%	; top: 	53.3809%	;" data-tooltip="	laagstam	" data-link=	boomlinkL19.htm>	L19	</div>
+        <!-- Markeringspunt 	L18	 -->	<div class="marker blue" style="left: 	49.2273%	; top: 	54.3991%	;" data-tooltip="	laagstam	" data-link=	boomlinkL18.htm>	L18	</div>
+        <!-- Markeringspunt 	L17	 -->	<div class="marker blue" style="left: 	49.1318%	; top: 	55.4173%	;" data-tooltip="	laagstam	" data-link=	boomlinkL17.htm>	L17	</div>
+        <!-- Markeringspunt 	L16	 -->	<div class="marker blue" style="left: 	49.0364%	; top: 	56.4355%	;" data-tooltip="	laagstam	" data-link=	boomlinkL16.htm>	L16	</div>
+        <!-- Markeringspunt 	L15	 -->	<div class="marker blue" style="left: 	48.9409%	; top: 	57.4536%	;" data-tooltip="	laagstam	" data-link=	boomlinkL15.htm>	L15	</div>
+        <!-- Markeringspunt 	L14	 -->	<div class="marker blue" style="left: 	48.8455%	; top: 	58.4718%	;" data-tooltip="	laagstam	" data-link=	boomlinkL14.htm>	L14	</div>
+        <!-- Markeringspunt 	L13	 -->	<div class="marker blue" style="left: 	48.7500%	; top: 	59.4900%	;" data-tooltip="	laagstam	" data-link=	boomlinkL13.htm>	L13	</div>
+												
+        <!-- Markeringspunt 	L36	 -->	<div class="marker blue" style="left: 	52.7700%	; top: 	48.3590%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL36.htm>	L36	</div>
+        <!-- Markeringspunt 	L34	 -->	<div class="marker blue" style="left: 	52.6745%	; top: 	49.3772%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL34.htm>	L34	</div>
+        <!-- Markeringspunt 	L33	 -->	<div class="marker blue" style="left: 	52.5791%	; top: 	50.3954%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL33.htm>	L33	</div>
+        <!-- Markeringspunt 	L32	 -->	<div class="marker blue" style="left: 	52.4836%	; top: 	51.4135%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL32.htm>	L32	</div>
+        <!-- Markeringspunt 	L31	 -->	<div class="marker blue" style="left: 	52.3882%	; top: 	52.4317%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL31.htm>	L31	</div>
+        <!-- Markeringspunt 	L30	 -->	<div class="marker blue" style="left: 	52.2927%	; top: 	53.4499%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL30.htm>	L30	</div>
+        <!-- Markeringspunt 	L30	 -->	<div class="marker blue" style="left: 	52.1973%	; top: 	54.4681%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL30.htm>	L30	</div>
+        <!-- Markeringspunt 	L29	 -->	<div class="marker blue" style="left: 	52.1018%	; top: 	55.4863%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL29.htm>	L29	</div>
+        <!-- Markeringspunt 	L28	 -->	<div class="marker blue" style="left: 	52.0064%	; top: 	56.5045%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL28.htm>	L28	</div>
+        <!-- Markeringspunt 	L27	 -->	<div class="marker blue" style="left: 	51.9109%	; top: 	57.5226%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL27.htm>	L27	</div>
+        <!-- Markeringspunt 	L26	 -->	<div class="marker blue" style="left: 	51.8155%	; top: 	58.5408%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL26.htm>	L26	</div>
+        <!-- Markeringspunt 	L25	 -->	<div class="marker blue" style="left: 	51.7200%	; top: 	59.5590%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL25.htm>	L25	</div>
+												
+        <!-- Markeringspunt 	L48	 -->	<div class="marker blue" style="left: 	54.5700%	; top: 	48.4490%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL48.htm>	L48	</div>
+        <!-- Markeringspunt 	L47	 -->	<div class="marker blue" style="left: 	54.4745%	; top: 	49.4672%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL47.htm>	L47	</div>
+        <!-- Markeringspunt 	L46	 -->	<div class="marker blue" style="left: 	54.3791%	; top: 	50.4854%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL46.htm>	L46	</div>
+        <!-- Markeringspunt 	L45	 -->	<div class="marker blue" style="left: 	54.2836%	; top: 	51.5035%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL45.htm>	L45	</div>
+        <!-- Markeringspunt 	L44	 -->	<div class="marker blue" style="left: 	54.1882%	; top: 	52.5217%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL44.htm>	L44	</div>
+        <!-- Markeringspunt 	L43	 -->	<div class="marker blue" style="left: 	54.0927%	; top: 	53.5399%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL43.htm>	L43	</div>
+        <!-- Markeringspunt 	L42	 -->	<div class="marker blue" style="left: 	53.9973%	; top: 	54.5581%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL42.htm>	L42	</div>
+        <!-- Markeringspunt 	L41	 -->	<div class="marker blue" style="left: 	53.9018%	; top: 	55.5763%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL41.htm>	L41	</div>
+        <!-- Markeringspunt 	L40	 -->	<div class="marker blue" style="left: 	53.8064%	; top: 	56.5945%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL40.htm>	L40	</div>
+        <!-- Markeringspunt 	L39	 -->	<div class="marker blue" style="left: 	53.7109%	; top: 	57.6126%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL39.htm>	L39	</div>
+        <!-- Markeringspunt 	L38	 -->	<div class="marker blue" style="left: 	53.6155%	; top: 	58.6308%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL38.htm>	L38	</div>
+        <!-- Markeringspunt 	L37	 -->	<div class="marker blue" style="left: 	53.5200%	; top: 	59.6490%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL37.htm>	L37	</div>
+												
+        <!-- Markeringspunt 	L60	 -->	<div class="marker blue" style="left: 	57.5400%	; top: 	48.5180%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL60.htm>	L60	</div>
+        <!-- Markeringspunt 	L59	 -->	<div class="marker blue" style="left: 	57.4445%	; top: 	49.5362%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL59.htm>	L59	</div>
+        <!-- Markeringspunt 	L58	 -->	<div class="marker blue" style="left: 	57.3491%	; top: 	50.5544%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL58.htm>	L58	</div>
+        <!-- Markeringspunt 	L57	 -->	<div class="marker blue" style="left: 	57.2536%	; top: 	51.5725%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL57.htm>	L57	</div>
+        <!-- Markeringspunt 	L56	 -->	<div class="marker blue" style="left: 	57.1582%	; top: 	52.5907%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL56.htm>	L56	</div>
+        <!-- Markeringspunt 	L55	 -->	<div class="marker blue" style="left: 	57.0627%	; top: 	53.6089%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL55.htm>	L55	</div>
+        <!-- Markeringspunt 	L54	 -->	<div class="marker blue" style="left: 	56.9673%	; top: 	54.6271%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL54.htm>	L54	</div>
+        <!-- Markeringspunt 	L53	 -->	<div class="marker blue" style="left: 	56.8718%	; top: 	55.6453%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL53.htm>	L53	</div>
+        <!-- Markeringspunt 	L52	 -->	<div class="marker blue" style="left: 	56.7764%	; top: 	56.6635%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL52.htm>	L52	</div>
+        <!-- Markeringspunt 	L51	 -->	<div class="marker blue" style="left: 	56.6809%	; top: 	57.6816%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL51.htm>	L51	</div>
+        <!-- Markeringspunt 	L50	 -->	<div class="marker blue" style="left: 	56.5855%	; top: 	58.6998%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL50.htm>	L50	</div>
+        <!-- Markeringspunt 	L49	 -->	<div class="marker blue" style="left: 	56.4900%	; top: 	59.7180%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL49.htm>	L49	</div>
+												
+        <!-- Markeringspunt 	L72	 -->	<div class="marker blue" style="left: 	59.3400%	; top: 	48.6080%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL72.htm>	L72	</div>
+        <!-- Markeringspunt 	L71	 -->	<div class="marker blue" style="left: 	59.2445%	; top: 	49.6262%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL71.htm>	L71	</div>
+        <!-- Markeringspunt 	L70	 -->	<div class="marker blue" style="left: 	59.1491%	; top: 	50.6444%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL70.htm>	L70	</div>
+        <!-- Markeringspunt 	L69	 -->	<div class="marker blue" style="left: 	59.0536%	; top: 	51.6625%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL69.htm>	L69	</div>
+        <!-- Markeringspunt 	L68	 -->	<div class="marker blue" style="left: 	58.9582%	; top: 	52.6807%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL68.htm>	L68	</div>
+        <!-- Markeringspunt 	L67	 -->	<div class="marker blue" style="left: 	58.8627%	; top: 	53.6989%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL67.htm>	L67	</div>
+        <!-- Markeringspunt 	L66	 -->	<div class="marker blue" style="left: 	58.7673%	; top: 	54.7171%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL66.htm>	L66	</div>
+        <!-- Markeringspunt 	L65	 -->	<div class="marker blue" style="left: 	58.6718%	; top: 	55.7353%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL65.htm>	L65	</div>
+        <!-- Markeringspunt 	L64	 -->	<div class="marker blue" style="left: 	58.5764%	; top: 	56.7535%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL64.htm>	L64	</div>
+        <!-- Markeringspunt 	L63	 -->	<div class="marker blue" style="left: 	58.4809%	; top: 	57.7716%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL63.htm>	L63	</div>
+        <!-- Markeringspunt 	L62	 -->	<div class="marker blue" style="left: 	58.3855%	; top: 	58.7898%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL62.htm>	L62	</div>
+        <!-- Markeringspunt 	L61	 -->	<div class="marker blue" style="left: 	58.2900%	; top: 	59.8080%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL61.htm>	L61	</div>
+												
+        <!-- Markeringspunt 	L84	 -->	<div class="marker blue" style="left: 	62.3100%	; top: 	48.6770%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL84.htm>	L84	</div>
+        <!-- Markeringspunt 	L83	 -->	<div class="marker blue" style="left: 	62.2145%	; top: 	49.6952%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL83.htm>	L83	</div>
+        <!-- Markeringspunt 	L82	 -->	<div class="marker blue" style="left: 	62.1191%	; top: 	50.7134%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL82.htm>	L82	</div>
+        <!-- Markeringspunt 	L81	 -->	<div class="marker blue" style="left: 	62.0236%	; top: 	51.7315%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL81.htm>	L81	</div>
+        <!-- Markeringspunt 	L80	 -->	<div class="marker blue" style="left: 	61.9282%	; top: 	52.7497%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL80.htm>	L80	</div>
+        <!-- Markeringspunt 	L79	 -->	<div class="marker blue" style="left: 	61.8327%	; top: 	53.7679%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL79.htm>	L79	</div>
+        <!-- Markeringspunt 	L78	 -->	<div class="marker blue" style="left: 	61.7373%	; top: 	54.7861%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL78.htm>	L78	</div>
+        <!-- Markeringspunt 	L77	 -->	<div class="marker blue" style="left: 	61.6418%	; top: 	55.8043%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL77.htm>	L77	</div>
+        <!-- Markeringspunt 	L76	 -->	<div class="marker blue" style="left: 	61.5464%	; top: 	56.8225%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL76.htm>	L76	</div>
+        <!-- Markeringspunt 	L75	 -->	<div class="marker blue" style="left: 	61.4509%	; top: 	57.8406%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL75.htm>	L75	</div>
+        <!-- Markeringspunt 	L74	 -->	<div class="marker blue" style="left: 	61.3555%	; top: 	58.8588%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL74.htm>	L74	</div>
+        <!-- Markeringspunt 	L73	 -->	<div class="marker blue" style="left: 	61.2600%	; top: 	59.8770%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL73.htm>	L73	</div>
+												
+        <!-- Markeringspunt 	L96	 -->	<div class="marker blue" style="left: 	64.1100%	; top: 	48.7670%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL96.htm>	L96	</div>
+        <!-- Markeringspunt 	L95	 -->	<div class="marker blue" style="left: 	64.0145%	; top: 	49.7852%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL95.htm>	L95	</div>
+        <!-- Markeringspunt 	L94	 -->	<div class="marker blue" style="left: 	63.9191%	; top: 	50.8034%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL94.htm>	L94	</div>
+        <!-- Markeringspunt 	L93	 -->	<div class="marker blue" style="left: 	63.8236%	; top: 	51.8215%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL93.htm>	L93	</div>
+        <!-- Markeringspunt 	L92	 -->	<div class="marker blue" style="left: 	63.7282%	; top: 	52.8397%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL92.htm>	L92	</div>
+        <!-- Markeringspunt 	L91	 -->	<div class="marker blue" style="left: 	63.6327%	; top: 	53.8579%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL91.htm>	L91	</div>
+        <!-- Markeringspunt 	L90	 -->	<div class="marker blue" style="left: 	63.5373%	; top: 	54.8761%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL90.htm>	L90	</div>
+        <!-- Markeringspunt 	L89	 -->	<div class="marker blue" style="left: 	63.4418%	; top: 	55.8943%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL89.htm>	L89	</div>
+        <!-- Markeringspunt 	L88	 -->	<div class="marker blue" style="left: 	63.3464%	; top: 	56.9125%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL88.htm>	L88	</div>
+        <!-- Markeringspunt 	L87	 -->	<div class="marker blue" style="left: 	63.2509%	; top: 	57.9306%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL87.htm>	L87	</div>
+        <!-- Markeringspunt 	L86	 -->	<div class="marker blue" style="left: 	63.1555%	; top: 	58.9488%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL86.htm>	L86	</div>
+        <!-- Markeringspunt 	L85	 -->	<div class="marker blue" style="left: 	63.0600%	; top: 	59.9670%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL85.htm>	L85	</div>
+												
+        <!-- Markeringspunt 	L108	 -->	<div class="marker blue" style="left: 	67.0800%	; top: 	48.8360%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL108.htm>	L108	</div>
+        <!-- Markeringspunt 	L107	 -->	<div class="marker blue" style="left: 	66.9845%	; top: 	49.8542%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL107.htm>	L107	</div>
+        <!-- Markeringspunt 	L106	 -->	<div class="marker blue" style="left: 	66.8891%	; top: 	50.8724%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL106.htm>	L106	</div>
+        <!-- Markeringspunt 	L105	 -->	<div class="marker blue" style="left: 	66.7936%	; top: 	51.8905%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL105.htm>	L105	</div>
+        <!-- Markeringspunt 	L104	 -->	<div class="marker blue" style="left: 	66.6982%	; top: 	52.9087%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL104.htm>	L104	</div>
+        <!-- Markeringspunt 	L103	 -->	<div class="marker blue" style="left: 	66.6027%	; top: 	53.9269%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL103.htm>	L103	</div>
+        <!-- Markeringspunt 	L102	 -->	<div class="marker blue" style="left: 	66.5073%	; top: 	54.9451%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL102.htm>	L102	</div>
+        <!-- Markeringspunt 	L101	 -->	<div class="marker blue" style="left: 	66.4118%	; top: 	55.9633%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL101.htm>	L101	</div>
+        <!-- Markeringspunt 	L100	 -->	<div class="marker blue" style="left: 	66.3164%	; top: 	56.9815%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL100.htm>	L100	</div>
+        <!-- Markeringspunt 	L99	 -->	<div class="marker blue" style="left: 	66.2209%	; top: 	57.9996%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL99.htm>	L99	</div>
+        <!-- Markeringspunt 	L98	 -->	<div class="marker blue" style="left: 	66.1255%	; top: 	59.0178%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL98.htm>	L98	</div>
+        <!-- Markeringspunt 	L97	 -->	<div class="marker blue" style="left: 	66.0300%	; top: 	60.0360%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL97.htm>	L97	</div>
+												
+        <!-- Markeringspunt 	L120	 -->	<div class="marker blue" style="left: 	68.8800%	; top: 	48.9260%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL120.htm>	L120	</div>
+        <!-- Markeringspunt 	L119	 -->	<div class="marker blue" style="left: 	68.7845%	; top: 	49.9442%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL119.htm>	L119	</div>
+        <!-- Markeringspunt 	L118	 -->	<div class="marker blue" style="left: 	68.6891%	; top: 	50.9624%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL118.htm>	L118	</div>
+        <!-- Markeringspunt 	L117	 -->	<div class="marker blue" style="left: 	68.5936%	; top: 	51.9805%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL117.htm>	L117	</div>
+        <!-- Markeringspunt 	L116	 -->	<div class="marker blue" style="left: 	68.4982%	; top: 	52.9987%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL116.htm>	L116	</div>
+        <!-- Markeringspunt 	L115	 -->	<div class="marker blue" style="left: 	68.4027%	; top: 	54.0169%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL115.htm>	L115	</div>
+        <!-- Markeringspunt 	L114	 -->	<div class="marker blue" style="left: 	68.3073%	; top: 	55.0351%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL114.htm>	L114	</div>
+        <!-- Markeringspunt 	L113	 -->	<div class="marker blue" style="left: 	68.2118%	; top: 	56.0533%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL113.htm>	L113	</div>
+        <!-- Markeringspunt 	L112	 -->	<div class="marker blue" style="left: 	68.1164%	; top: 	57.0715%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL112.htm>	L112	</div>
+        <!-- Markeringspunt 	L111	 -->	<div class="marker blue" style="left: 	68.0209%	; top: 	58.0896%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL111.htm>	L111	</div>
+        <!-- Markeringspunt 	L110	 -->	<div class="marker blue" style="left: 	67.9255%	; top: 	59.1078%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL110.htm>	L110	</div>
+        <!-- Markeringspunt 	L109	 -->	<div class="marker blue" style="left: 	67.8300%	; top: 	60.1260%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL109.htm>	L109	</div>
+												
+        <!-- Markeringspunt 	L132	 -->	<div class="marker blue" style="left: 	71.8500%	; top: 	48.9950%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL132.htm>	L132	</div>
+        <!-- Markeringspunt 	L131	 -->	<div class="marker blue" style="left: 	71.7545%	; top: 	50.0132%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL131.htm>	L131	</div>
+        <!-- Markeringspunt 	L130	 -->	<div class="marker blue" style="left: 	71.6591%	; top: 	51.0314%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL130.htm>	L130	</div>
+        <!-- Markeringspunt 	L129	 -->	<div class="marker blue" style="left: 	71.5636%	; top: 	52.0495%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL129.htm>	L129	</div>
+        <!-- Markeringspunt 	L128	 -->	<div class="marker blue" style="left: 	71.4682%	; top: 	53.0677%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL128.htm>	L128	</div>
+        <!-- Markeringspunt 	L127	 -->	<div class="marker blue" style="left: 	71.3727%	; top: 	54.0859%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL127.htm>	L127	</div>
+        <!-- Markeringspunt 	L126	 -->	<div class="marker blue" style="left: 	71.2773%	; top: 	55.1041%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL126.htm>	L126	</div>
+        <!-- Markeringspunt 	L125	 -->	<div class="marker blue" style="left: 	71.1818%	; top: 	56.1223%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL125.htm>	L125	</div>
+        <!-- Markeringspunt 	L124	 -->	<div class="marker blue" style="left: 	71.0864%	; top: 	57.1405%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL124.htm>	L124	</div>
+        <!-- Markeringspunt 	L123	 -->	<div class="marker blue" style="left: 	70.9909%	; top: 	58.1586%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL123.htm>	L123	</div>
+        <!-- Markeringspunt 	L122	 -->	<div class="marker blue" style="left: 	70.8955%	; top: 	59.1768%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL122.htm>	L122	</div>
+        <!-- Markeringspunt 	L121	 -->	<div class="marker blue" style="left: 	70.8000%	; top: 	60.1950%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL121.htm>	L121	</div>
+												
+        <!-- Markeringspunt 	L144	 -->	<div class="marker blue" style="left: 	73.6500%	; top: 	49.0850%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL144.htm>	L144	</div>
+        <!-- Markeringspunt 	L143	 -->	<div class="marker blue" style="left: 	73.5545%	; top: 	50.1032%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL143.htm>	L143	</div>
+        <!-- Markeringspunt 	L142	 -->	<div class="marker blue" style="left: 	73.4591%	; top: 	51.1214%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL142.htm>	L142	</div>
+        <!-- Markeringspunt 	L141	 -->	<div class="marker blue" style="left: 	73.3636%	; top: 	52.1395%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL141.htm>	L141	</div>
+        <!-- Markeringspunt 	L140	 -->	<div class="marker blue" style="left: 	73.2682%	; top: 	53.1577%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL140.htm>	L140	</div>
+        <!-- Markeringspunt 	L139	 -->	<div class="marker blue" style="left: 	73.1727%	; top: 	54.1759%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL139.htm>	L139	</div>
+        <!-- Markeringspunt 	L138	 -->	<div class="marker blue" style="left: 	73.0773%	; top: 	55.1941%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL138.htm>	L138	</div>
+        <!-- Markeringspunt 	L137	 -->	<div class="marker blue" style="left: 	72.9818%	; top: 	56.2123%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL137.htm>	L137	</div>
+        <!-- Markeringspunt 	L136	 -->	<div class="marker blue" style="left: 	72.8864%	; top: 	57.2305%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL136.htm>	L136	</div>
+        <!-- Markeringspunt 	L135	 -->	<div class="marker blue" style="left: 	72.7909%	; top: 	58.2486%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL135.htm>	L135	</div>
+        <!-- Markeringspunt 	L134	 -->	<div class="marker blue" style="left: 	72.6955%	; top: 	59.2668%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL134.htm>	L134	</div>
+        <!-- Markeringspunt 	L133	 -->	<div class="marker blue" style="left: 	72.6000%	; top: 	60.2850%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL133.htm>	L133	</div>
+												
+        <!-- Markeringspunt 	L156	 -->	<div class="marker blue" style="left: 	76.6200%	; top: 	49.1540%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL156.htm>	L156	</div>
+        <!-- Markeringspunt 	L155	 -->	<div class="marker blue" style="left: 	76.5245%	; top: 	50.1722%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL155.htm>	L155	</div>
+        <!-- Markeringspunt 	L154	 -->	<div class="marker blue" style="left: 	76.4291%	; top: 	51.1904%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL154.htm>	L154	</div>
+        <!-- Markeringspunt 	L153	 -->	<div class="marker blue" style="left: 	76.3336%	; top: 	52.2085%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL153.htm>	L153	</div>
+        <!-- Markeringspunt 	L152	 -->	<div class="marker blue" style="left: 	76.2382%	; top: 	53.2267%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL152.htm>	L152	</div>
+        <!-- Markeringspunt 	L151	 -->	<div class="marker blue" style="left: 	76.1427%	; top: 	54.2449%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL151.htm>	L151	</div>
+        <!-- Markeringspunt 	L150	 -->	<div class="marker blue" style="left: 	76.0473%	; top: 	55.2631%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL150.htm>	L150	</div>
+        <!-- Markeringspunt 	L149	 -->	<div class="marker blue" style="left: 	75.9518%	; top: 	56.2813%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL149.htm>	L149	</div>
+        <!-- Markeringspunt 	L148	 -->	<div class="marker blue" style="left: 	75.8564%	; top: 	57.2995%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL148.htm>	L148	</div>
+        <!-- Markeringspunt 	L147	 -->	<div class="marker blue" style="left: 	75.7609%	; top: 	58.3176%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL147.htm>	L147	</div>
+        <!-- Markeringspunt 	L146	 -->	<div class="marker blue" style="left: 	75.6655%	; top: 	59.3358%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL146.htm>	L146	</div>
+        <!-- Markeringspunt 	L145	 -->	<div class="marker blue" style="left: 	75.5700%	; top: 	60.3540%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL145.htm>	L145	</div>
+												
+        <!-- Markeringspunt 	L168	 -->	<div class="marker blue" style="left: 	78.4200%	; top: 	49.2440%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL168.htm>	L168	</div>
+        <!-- Markeringspunt 	L167	 -->	<div class="marker blue" style="left: 	78.3245%	; top: 	50.2622%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL167.htm>	L167	</div>
+        <!-- Markeringspunt 	L166	 -->	<div class="marker blue" style="left: 	78.2291%	; top: 	51.2804%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL166.htm>	L166	</div>
+        <!-- Markeringspunt 	L165	 -->	<div class="marker blue" style="left: 	78.1336%	; top: 	52.2985%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL165.htm>	L165	</div>
+        <!-- Markeringspunt 	L164	 -->	<div class="marker blue" style="left: 	78.0382%	; top: 	53.3167%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL164.htm>	L164	</div>
+        <!-- Markeringspunt 	L163	 -->	<div class="marker blue" style="left: 	77.9427%	; top: 	54.3349%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL163.htm>	L163	</div>
+        <!-- Markeringspunt 	L162	 -->	<div class="marker blue" style="left: 	77.8473%	; top: 	55.3531%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL162.htm>	L162	</div>
+        <!-- Markeringspunt 	L161	 -->	<div class="marker blue" style="left: 	77.7518%	; top: 	56.3713%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL161.htm>	L161	</div>
+        <!-- Markeringspunt 	L160	 -->	<div class="marker blue" style="left: 	77.6564%	; top: 	57.3895%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL160.htm>	L160	</div>
+        <!-- Markeringspunt 	L159	 -->	<div class="marker blue" style="left: 	77.5609%	; top: 	58.4076%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL159.htm>	L159	</div>
+        <!-- Markeringspunt 	L158	 -->	<div class="marker blue" style="left: 	77.4655%	; top: 	59.4258%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL158.htm>	L158	</div>
+        <!-- Markeringspunt 	L157	 -->	<div class="marker blue" style="left: 	77.3700%	; top: 	60.4440%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL157.htm>	L157	</div>
+												
+        <!-- Markeringspunt 	L180	 -->	<div class="marker blue" style="left: 	81.3900%	; top: 	49.3130%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL180.htm>	L180	</div>
+        <!-- Markeringspunt 	L179	 -->	<div class="marker blue" style="left: 	81.2945%	; top: 	50.3312%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL179.htm>	L179	</div>
+        <!-- Markeringspunt 	L178	 -->	<div class="marker blue" style="left: 	81.1991%	; top: 	51.3494%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL178.htm>	L178	</div>
+        <!-- Markeringspunt 	L177	 -->	<div class="marker blue" style="left: 	81.1036%	; top: 	52.3675%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL177.htm>	L177	</div>
+        <!-- Markeringspunt 	L176	 -->	<div class="marker blue" style="left: 	81.0082%	; top: 	53.3857%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL176.htm>	L176	</div>
+        <!-- Markeringspunt 	L175	 -->	<div class="marker blue" style="left: 	80.9127%	; top: 	54.4039%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL175.htm>	L175	</div>
+        <!-- Markeringspunt 	L174	 -->	<div class="marker blue" style="left: 	80.8173%	; top: 	55.4221%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL174.htm>	L174	</div>
+        <!-- Markeringspunt 	L173	 -->	<div class="marker blue" style="left: 	80.7218%	; top: 	56.4403%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL173.htm>	L173	</div>
+        <!-- Markeringspunt 	L172	 -->	<div class="marker blue" style="left: 	80.6264%	; top: 	57.4585%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL172.htm>	L172	</div>
+        <!-- Markeringspunt 	L171	 -->	<div class="marker blue" style="left: 	80.5309%	; top: 	58.4766%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL171.htm>	L171	</div>
+        <!-- Markeringspunt 	L170	 -->	<div class="marker blue" style="left: 	80.4355%	; top: 	59.4948%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL170.htm>	L170	</div>
+        <!-- Markeringspunt 	L169	 -->	<div class="marker blue" style="left: 	80.3400%	; top: 	60.5130%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL169.htm>	L169	</div>
+												
+        <!-- Markeringspunt 	L192	 -->	<div class="marker blue" style="left: 	83.1900%	; top: 	49.4030%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL192.htm>	L192	</div>
+        <!-- Markeringspunt 	L191	 -->	<div class="marker blue" style="left: 	83.0945%	; top: 	50.4212%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL191.htm>	L191	</div>
+        <!-- Markeringspunt 	L190	 -->	<div class="marker blue" style="left: 	82.9991%	; top: 	51.4394%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL190.htm>	L190	</div>
+        <!-- Markeringspunt 	L189	 -->	<div class="marker blue" style="left: 	82.9036%	; top: 	52.4575%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL189.htm>	L189	</div>
+        <!-- Markeringspunt 	L188	 -->	<div class="marker blue" style="left: 	82.8082%	; top: 	53.4757%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL188.htm>	L188	</div>
+        <!-- Markeringspunt 	L187	 -->	<div class="marker blue" style="left: 	82.7127%	; top: 	54.4939%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL187.htm>	L187	</div>
+        <!-- Markeringspunt 	L186	 -->	<div class="marker blue" style="left: 	82.6173%	; top: 	55.5121%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL186.htm>	L186	</div>
+        <!-- Markeringspunt 	L185	 -->	<div class="marker blue" style="left: 	82.5218%	; top: 	56.5303%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL185.htm>	L185	</div>
+        <!-- Markeringspunt 	L184	 -->	<div class="marker blue" style="left: 	82.4264%	; top: 	57.5485%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL184.htm>	L184	</div>
+        <!-- Markeringspunt 	L183	 -->	<div class="marker blue" style="left: 	82.3309%	; top: 	58.5666%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL183.htm>	L183	</div>
+        <!-- Markeringspunt 	L182	 -->	<div class="marker blue" style="left: 	82.2355%	; top: 	59.5848%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL182.htm>	L182	</div>
+        <!-- Markeringspunt 	L181	 -->	<div class="marker blue" style="left: 	82.1400%	; top: 	60.6030%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL181.htm>	L181	</div>
+												
+        <!-- Markeringspunt 	L204	 -->	<div class="marker blue" style="left: 	86.1600%	; top: 	49.4720%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL204.htm>	L204	</div>
+        <!-- Markeringspunt 	L203	 -->	<div class="marker blue" style="left: 	86.0645%	; top: 	50.4902%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL203.htm>	L203	</div>
+        <!-- Markeringspunt 	L202	 -->	<div class="marker blue" style="left: 	85.9691%	; top: 	51.5084%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL202.htm>	L202	</div>
+        <!-- Markeringspunt 	L201	 -->	<div class="marker blue" style="left: 	85.8736%	; top: 	52.5265%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL201.htm>	L201	</div>
+        <!-- Markeringspunt 	L200	 -->	<div class="marker blue" style="left: 	85.7782%	; top: 	53.5447%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL200.htm>	L200	</div>
+        <!-- Markeringspunt 	L199	 -->	<div class="marker blue" style="left: 	85.6827%	; top: 	54.5629%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL199.htm>	L199	</div>
+        <!-- Markeringspunt 	L198	 -->	<div class="marker blue" style="left: 	85.5873%	; top: 	55.5811%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL198.htm>	L198	</div>
+        <!-- Markeringspunt 	L197	 -->	<div class="marker blue" style="left: 	85.4918%	; top: 	56.5993%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL197.htm>	L197	</div>
+        <!-- Markeringspunt 	L196	 -->	<div class="marker blue" style="left: 	85.3964%	; top: 	57.6175%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL196.htm>	L196	</div>
+        <!-- Markeringspunt 	L195	 -->	<div class="marker blue" style="left: 	85.3009%	; top: 	58.6356%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL195.htm>	L195	</div>
+        <!-- Markeringspunt 	L194	 -->	<div class="marker blue" style="left: 	85.2055%	; top: 	59.6538%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL194.htm>	L194	</div>
+        <!-- Markeringspunt 	L193	 -->	<div class="marker blue" style="left: 	85.1100%	; top: 	60.6720%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL193.htm>	L193	</div>
+												
+        <!-- Markeringspunt 	L216	 -->	<div class="marker blue" style="left: 	87.9600%	; top: 	49.5620%	;" data-tooltip="	Abrikozenboom Tros Oranje	" data-link=	boomlinkL216.htm>	L216	</div>
+        <!-- Markeringspunt 	L215	 -->	<div class="marker blue" style="left: 	87.8645%	; top: 	50.5802%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL215.htm>	L215	</div>
+        <!-- Markeringspunt 	L214	 -->	<div class="marker blue" style="left: 	87.7691%	; top: 	51.5984%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL214.htm>	L214	</div>
+        <!-- Markeringspunt 	L213	 -->	<div class="marker blue" style="left: 	87.6736%	; top: 	52.6165%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL213.htm>	L213	</div>
+        <!-- Markeringspunt 	L212	 -->	<div class="marker blue" style="left: 	87.5782%	; top: 	53.6347%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL212.htm>	L212	</div>
+        <!-- Markeringspunt 	L211	 -->	<div class="marker blue" style="left: 	87.4827%	; top: 	54.6529%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL211.htm>	L211	</div>
+        <!-- Markeringspunt 	L210	 -->	<div class="marker blue" style="left: 	87.3873%	; top: 	55.6711%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL210.htm>	L210	</div>
+        <!-- Markeringspunt 	L209	 -->	<div class="marker blue" style="left: 	87.2918%	; top: 	56.6893%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL209.htm>	L209	</div>
+        <!-- Markeringspunt 	L208	 -->	<div class="marker blue" style="left: 	87.1964%	; top: 	57.7075%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL208.htm>	L208	</div>
+        <!-- Markeringspunt 	L207	 -->	<div class="marker blue" style="left: 	87.1009%	; top: 	58.7256%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL207.htm>	L207	</div>
+        <!-- Markeringspunt 	L206	 -->	<div class="marker blue" style="left: 	87.0055%	; top: 	59.7438%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL206.htm>	L206	</div>
+        <!-- Markeringspunt 	L205	 -->	<div class="marker blue" style="left: 	86.9100%	; top: 	60.7620%	;" data-tooltip="	Gele Kornoelje	" data-link=	boomlinkL205.htm>	L205	</div>
+
+
+
+
+ 
+
+
+        <!-- Markeringspunt 	F1	 -->	<div class="marker red" style="left: 	59.7000%	; top: 	63.7273%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF1.htm>	F1	</div>
+        <!-- Markeringspunt 	F2	 -->	<div class="marker red" style="left: 	61.1364%	; top: 	64.2975%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF2.htm>	F2	</div>
+        <!-- Markeringspunt 	F3	 -->	<div class="marker red" style="left: 	62.5727%	; top: 	64.8678%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF3.htm>	F3	</div>
+        <!-- Markeringspunt 	F4	 -->	<div class="marker red" style="left: 	64.0091%	; top: 	65.4380%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF4.htm>	F4	</div>
+        <!-- Markeringspunt 	F5	 -->	<div class="marker red" style="left: 	65.4455%	; top: 	66.0083%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF5.htm>	F5	</div>
+        <!-- Markeringspunt 	F6	 -->	<div class="marker red" style="left: 	66.8818%	; top: 	66.5785%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF6.htm>	F6	</div>
+        <!-- Markeringspunt 	F7	 -->	<div class="marker red" style="left: 	68.3182%	; top: 	67.1488%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF7.htm>	F7	</div>
+        <!-- Markeringspunt 	F8	 -->	<div class="marker red" style="left: 	69.7545%	; top: 	67.7190%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF8.htm>	F8	</div>
+        <!-- Markeringspunt 	F9	 -->	<div class="marker red" style="left: 	71.1909%	; top: 	68.2893%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF9.htm>	F9	</div>
+        <!-- Markeringspunt 	F10	 -->	<div class="marker red" style="left: 	72.6273%	; top: 	68.8595%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF10.htm>	F10	</div>
+        <!-- Markeringspunt 	F11	 -->	<div class="marker red" style="left: 	74.0636%	; top: 	69.4298%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF11.htm>	F11	</div>
+        <!-- Markeringspunt 	F12	 -->	<div class="marker red" style="left: 	75.5000%	; top: 	70.0000%	;" data-tooltip="	Laag Fruit	" data-link=	boomlinkF12.htm>	F12	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- Je kunt meer markeringspunten toevoegen door meer div-elementen toe te voegen met de class "marker" en verschillende "left" en "top" waarden -->
+        
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip">
+            <span id="tooltipLocation" class="tooltip-location"></span>
+            <a id="tooltipLink" class="tooltip-link" href="#" target="_blank"></a>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript voor tooltips -->
+    <!-- JavaScript voor tooltips -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const markers = document.querySelectorAll('.marker');
+            const tooltip = document.getElementById('tooltip');
+            const tooltipLink = document.getElementById('tooltipLink');
+            const tooltipLocation = document.getElementById('tooltipLocation');
+            let tooltipTimeout;
+
+            markers.forEach(marker => {
+                marker.addEventListener('mouseenter', (e) => {
+                    const markerRect = marker.getBoundingClientRect();
+
+                    tooltip.style.top = `${marker.offsetTop}px`;
+                    tooltip.style.left = `${marker.offsetLeft + marker.offsetWidth}px`;
+                    tooltip.style.opacity = 1;
+
+                    tooltipLocation.textContent = marker.getAttribute('data-tooltip');
+
+                    // Plaats de link naast de tooltip
+                    tooltipLink.style.top = `${marker.offsetTop}px`;
+                    tooltipLink.style.left = `${marker.offsetLeft + marker.offsetWidth + tooltip.offsetWidth}px`;
+                    tooltipLink.href = marker.getAttribute('data-link'); // Stel de link van de tooltip in op basis van de data-link attribuut van de marker
+                    clearTimeout(tooltipTimeout); // Stop de timer voor het verbergen van de tooltip als de muis weer op de marker komt
+                });
+
+                marker.addEventListener('mouseleave', () => {
+                    tooltipTimeout = setTimeout(() => {
+                        tooltip.style.opacity = 0;
+                    }, 1000); // Verberg de tooltip na 1 seconde
+                });
+            });
+
+            // Houd de tooltip zichtbaar als de muis zich binnen de tooltip bevindt
+            tooltip.addEventListener('mouseenter', () => {
+                clearTimeout(tooltipTimeout); // Stop de timer voor het verbergen van de tooltip
+            });
+
+            // Verberg de tooltip als de muis de tooltip verlaat
+            tooltip.addEventListener('mouseleave', () => {
+                tooltipTimeout = setTimeout(() => {
+                    tooltip.style.opacity = 0;
+                }, 1000); // Verberg de tooltip na 1 seconde
+            });
+        });
+    </script>
+</body>
+</html>
