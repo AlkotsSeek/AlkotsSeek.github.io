@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voedselbos Noaberboeren</title>
+    <style>
+        /* Stijlen voor de kaartcontainer */
+        .kaart-container {
+            position: relative;
+            width: 1000px; /* Pas aan naar wens */
+            height: 800px; /* Pas aan naar wens */
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            background-image: url('Voedselbos 240218.jpg'); /* URL naar de geconverteerde afbeelding */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        /* Stijlen voor markeringspunten */
+        .marker {
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-color: #000; /* standaardkleur */
+            border-radius: 50%; /* Maakt de marker een cirkel */
+            cursor: pointer; /* Wijzig de cursor naar een handje om aan te geven dat het punt klikbaar is */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6px;
+            color: white; /* kleur van de tekst */
+		text-decoration: none; /* geen onderstreping van de link */
+        }
+
+.marker a {
+    color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+        .marker.red {
+    background-color: red;
+	color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+	.marker.blue {
+    background-color: blue;
+	color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+	.marker.green {
+    background-color: green;
+	color: white; /* kleur van de tekst */
+    text-decoration: none; /* geen onderstreping van de link */
+}
+
+
+
+        /* Stijlen voor tooltips */
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            pointer-events: none; /* Voorkomt dat de tooltip zelf wordt aangeklikt */
+            opacity: 0; /* Verberg de tooltip standaard */
+            transition: opacity 0.3s ease; /* Voeg een vloeiende overgang toe bij het tonen/verbergen van de tooltip */
+            z-index: 1000; /* Zorg ervoor dat de tooltip bovenaan ligt */
+        }
+        
+        /* Stijl voor de tooltippijl */
+        .tooltip::before {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%); /* Plaats de pijl in het midden van de tooltip */
+        }
+
+        /* Stijlen voor de link binnen de tooltip */
+        .tooltip-link {
+            color: white;
+            text-decoration: underline;
+            pointer-events: auto; /* Zorg ervoor dat de link klikbaar is */
+            display: block; /* Zorgt ervoor dat de link de hele breedte van de tooltip inneemt */
+            margin-top: 5px; /* Voegt ruimte toe tussen de tekst en de link */
+        }
+/* Stijl voor de knoppen */
+.button {
+  background-color: #9F4522; /* Achtergrondkleur van de knop lichtbruin */
+  color: white; /* Tekstkleur van de knop */
+  padding: 10px 20px; /* Ruimte rond de tekst in de knop */
+  border: none; /* Geen rand om de knop */
+  border-radius: 5px; /* Afgeronde hoeken voor een betere uitstraling */
+  cursor: pointer; /* Cursor veranderen in een handje bij hover */
+	margin-bottom: 20px; /* Ondermarge om de knoppen te verplaatsen */
+}
+
+/* Stijl voor de knoppen bij hover */
+.button:hover {
+  background-color: #804a34; /* Achtergrondkleur van de knop bij hover donkerder bruin */
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Kaartcontainer -->
+    <div class="kaart-container">
+
+<!-- Knoppen bovenaan de pagina -->
+<button class="button"  onclick="window.location.href = 'index.html';">Aaftink</button>
+<button class="button"  onclick="window.location.href = 'kaartshow Leem.html';">Leem</button>
+<button class="button"  onclick="window.location.href = 'kaartshow Es.html';">Es</button>
+<button class="button"  onclick="window.location.href = 'kaartshow Fruit.html';">Fruit</button>
+<button class="button"  onclick="window.location.href = 'https://noaberboeren.nl/';">Noaberboeren Home</button>
+
+
+
+
+
+
+
+
+<!-- VOEDSELBOS -->
+       
+         <!-- Markeringspunt 	A1	 -->	<div class="marker" style="left: 	30.5000%	; top: 	18.0000%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	boomlink1.htm	">	A1	  </div>
+        <!-- Markeringspunt 	A2	 -->	<div class="marker" style="left: 	30.3714%	; top: 	20.3929%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A2	  </div>
+        <!-- Markeringspunt 	A3	 -->	<div class="marker" style="left: 	30.2429%	; top: 	22.7857%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A3	  </div>
+        <!-- Markeringspunt 	A4	 -->	<div class="marker" style="left: 	30.1143%	; top: 	25.1786%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A4	  </div>
+        <!-- Markeringspunt 	A5	 -->	<div class="marker" style="left: 	29.9857%	; top: 	27.5714%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A5	  </div>
+        <!-- Markeringspunt 	A6	 -->	<div class="marker" style="left: 	29.8571%	; top: 	29.9643%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A6	  </div>
+        <!-- Markeringspunt 	A7	 -->	<div class="marker" style="left: 	29.7286%	; top: 	32.3571%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A7	  </div>
+        <!-- Markeringspunt 	A8	 -->	<div class="marker" style="left: 	29.6000%	; top: 	34.7500%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A8	  </div>
+        <!-- Markeringspunt 	A9	 -->	<div class="marker" style="left: 	29.4714%	; top: 	37.1429%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A9	  </div>
+        <!-- Markeringspunt 	A10	 -->	<div class="marker" style="left: 	29.3429%	; top: 	39.5357%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A10	  </div>
+        <!-- Markeringspunt 	A11	 -->	<div class="marker" style="left: 	29.2143%	; top: 	41.9286%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A11	  </div>
+        <!-- Markeringspunt 	A12	 -->	<div class="marker" style="left: 	29.0857%	; top: 	44.3214%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A12	  </div>
+        <!-- Markeringspunt 	A13	 -->	<div class="marker" style="left: 	28.9571%	; top: 	46.7143%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A13	  </div>
+        <!-- Markeringspunt 	A14	 -->	<div class="marker" style="left: 	28.8286%	; top: 	49.1071%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A14	  </div>
+        <!-- Markeringspunt 	A15	 -->	<div class="marker" style="left: 	28.7000%	; top: 	51.5000%	;" data-tooltip="	Cornus Mas, Gele Kornoelje	" data-link="	A Cornus Mas Gele Kornoelje.htm	">	A15	  </div>
+        <!-- Markeringspunt 	B16	 -->	<div class="marker" style="left: 	33.0000%	; top: 	39.0000%	;" data-tooltip="	Prunus Armeniaca, Abrikozenboom Tros Oranje	" data-link="	B Prunus Armeniaca Abrikozenboom Tros Oranje.htm	">	B16	  </div>
+        <!-- Markeringspunt 	B17	 -->	<div class="marker" style="left: 	32.0000%	; top: 	50.0000%	;" data-tooltip="	Prunus Armeniaca, Abrikozenboom Tros Oranje	" data-link="	B Prunus Armeniaca Abrikozenboom Tros Oranje.htm	">	B17	  </div>
+        <!-- Markeringspunt 	C18	 -->	<div class="marker" style="left: 	32.0000%	; top: 	19.0000%	;" data-tooltip="	Toona Sinensis, Uiensoepboom	" data-link="	C Toona Sinensis Uiensoepboom.htm	">	C18	  </div>
+        <!-- Markeringspunt 	C19	 -->	<div class="marker" style="left: 	32.5000%	; top: 	26.0000%	;" data-tooltip="	Toona Sinensis, Uiensoepboom	" data-link="	C Toona Sinensis Uiensoepboom.htm	">	C19	  </div>
+        <!-- Markeringspunt 	D20	 -->	<div class="marker" style="left: 	34.0000%	; top: 	19.0000%	;" data-tooltip="	Sambucus Nigra, Vlier	" data-link="	D Sambucus Nigra Vlier.htm	">	D20	  </div>
+        <!-- Markeringspunt 	D21	 -->	<div class="marker" style="left: 	40.0000%	; top: 	18.0000%	;" data-tooltip="	Sambucus Nigra, Vlier	" data-link="	D Sambucus Nigra Vlier.htm	">	D21	  </div>
+        <!-- Markeringspunt 	D22	 -->	<div class="marker" style="left: 	48.0000%	; top: 	18.0000%	;" data-tooltip="	Sambucus Nigra, Vlier	" data-link="	D Sambucus Nigra Vlier.htm	">	D22	  </div>
+        <!-- Markeringspunt 	D23	 -->	<div class="marker" style="left: 	34.0000%	; top: 	30.0000%	;" data-tooltip="	Sambucus Nigra, Vlier	" data-link="	D Sambucus Nigra Vlier.htm	">	D23	  </div>
+        <!-- Markeringspunt 	D24	 -->	<div class="marker" style="left: 	34.0000%	; top: 	49.0000%	;" data-tooltip="	Sambucus Nigra, Vlier	" data-link="	D Sambucus Nigra Vlier.htm	">	D24	  </div>
+        <!-- Markeringspunt 	E25	 -->	<div class="marker" style="left: 	33.0000%	; top: 	16.0000%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E25	  </div>
+        <!-- Markeringspunt 	E26	 -->	<div class="marker" style="left: 	34.3026%	; top: 	15.9035%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E26	  </div>
+        <!-- Markeringspunt 	E27	 -->	<div class="marker" style="left: 	35.6053%	; top: 	15.8070%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E27	  </div>
+        <!-- Markeringspunt 	E28	 -->	<div class="marker" style="left: 	36.9079%	; top: 	15.7105%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E28	  </div>
+        <!-- Markeringspunt 	E29	 -->	<div class="marker" style="left: 	38.2105%	; top: 	15.6140%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E29	  </div>
+        <!-- Markeringspunt 	E30	 -->	<div class="marker" style="left: 	39.5132%	; top: 	15.5175%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E30	  </div>
+        <!-- Markeringspunt 	E31	 -->	<div class="marker" style="left: 	40.8158%	; top: 	15.4211%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E31	  </div>
+        <!-- Markeringspunt 	E32	 -->	<div class="marker" style="left: 	42.1184%	; top: 	15.3246%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E32	  </div>
+        <!-- Markeringspunt 	E33	 -->	<div class="marker" style="left: 	43.4211%	; top: 	15.2281%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E33	  </div>
+        <!-- Markeringspunt 	E34	 -->	<div class="marker" style="left: 	44.7237%	; top: 	15.1316%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E34	  </div>
+        <!-- Markeringspunt 	E35	 -->	<div class="marker" style="left: 	46.0263%	; top: 	15.0351%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E35	  </div>
+        <!-- Markeringspunt 	E36	 -->	<div class="marker" style="left: 	47.3289%	; top: 	14.9386%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E36	  </div>
+        <!-- Markeringspunt 	E37	 -->	<div class="marker" style="left: 	48.6316%	; top: 	14.8421%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E37	  </div>
+        <!-- Markeringspunt 	E38	 -->	<div class="marker" style="left: 	49.9342%	; top: 	14.7456%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E38	  </div>
+        <!-- Markeringspunt 	E39	 -->	<div class="marker" style="left: 	51.2368%	; top: 	14.6491%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E39	  </div>
+        <!-- Markeringspunt 	E40	 -->	<div class="marker" style="left: 	52.5395%	; top: 	14.5526%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E40	  </div>
+        <!-- Markeringspunt 	E41	 -->	<div class="marker" style="left: 	53.8421%	; top: 	14.4561%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E41	  </div>
+        <!-- Markeringspunt 	E42	 -->	<div class="marker" style="left: 	55.1447%	; top: 	14.3596%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E42	  </div>
+        <!-- Markeringspunt 	E43	 -->	<div class="marker" style="left: 	56.4474%	; top: 	14.2632%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E43	  </div>
+        <!-- Markeringspunt 	E44	 -->	<div class="marker" style="left: 	57.7500%	; top: 	14.1667%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E44	  </div>
+        <!-- Markeringspunt 	E45	 -->	<div class="marker" style="left: 	57.0000%	; top: 	25.5000%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E45	  </div>
+        <!-- Markeringspunt 	E46	 -->	<div class="marker" style="left: 	58.0000%	; top: 	25.0000%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E46	  </div>
+        <!-- Markeringspunt 	E47	 -->	<div class="marker" style="left: 	59.0000%	; top: 	25.5000%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E47	  </div>
+        <!-- Markeringspunt 	E48	 -->	<div class="marker" style="left: 	58.5000%	; top: 	26.5000%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E48	  </div>
+        <!-- Markeringspunt 	E49	 -->	<div class="marker" style="left: 	57.5000%	; top: 	27.0000%	;" data-tooltip="	Rubus Idaeus, Framboos	" data-link="	E Rubus Idaeus Framboos.htm	">	E49	  </div>
+        <!-- Markeringspunt 	F50	 -->	<div class="marker" style="left: 	10.0000%	; top: 	29.3929%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F50	  </div>
+        <!-- Markeringspunt 	F51	 -->	<div class="marker" style="left: 	36.0000%	; top: 	51.5000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F51	  </div>
+        <!-- Markeringspunt 	F52	 -->	<div class="marker" style="left: 	38.0000%	; top: 	31.0000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F52	  </div>
+        <!-- Markeringspunt 	F53	 -->	<div class="marker" style="left: 	40.0000%	; top: 	46.0000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F53	  </div>
+        <!-- Markeringspunt 	F54	 -->	<div class="marker" style="left: 	52.0000%	; top: 	49.0000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F54	  </div>
+        <!-- Markeringspunt 	F55	 -->	<div class="marker" style="left: 	57.0000%	; top: 	40.0000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F55	  </div>
+        <!-- Markeringspunt 	F56	 -->	<div class="marker" style="left: 	58.0000%	; top: 	49.0000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F56	  </div>
+        <!-- Markeringspunt 	F57	 -->	<div class="marker" style="left: 	72.0000%	; top: 	40.0000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F57	  </div>
+        <!-- Markeringspunt 	F58	 -->	<div class="marker" style="left: 	76.0000%	; top: 	29.0000%	;" data-tooltip="	Corylus, Hazelnoot	" data-link="	F Corylus Hazelnoot.htm	">	F58	  </div>
+        <!-- Markeringspunt 	G59	 -->	<div class="marker" style="left: 	36.5000%	; top: 	20.5000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G59	  </div>
+        <!-- Markeringspunt 	G60	 -->	<div class="marker" style="left: 	37.5000%	; top: 	20.0000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G60	  </div>
+        <!-- Markeringspunt 	G61	 -->	<div class="marker" style="left: 	38.0000%	; top: 	21.0000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G61	  </div>
+        <!-- Markeringspunt 	G62	 -->	<div class="marker" style="left: 	37.5000%	; top: 	22.0000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G62	  </div>
+        <!-- Markeringspunt 	G63	 -->	<div class="marker" style="left: 	36.5000%	; top: 	21.5000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G63	  </div>
+        <!-- Markeringspunt 	G64	 -->	<div class="marker" style="left: 	71.0000%	; top: 	50.5000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G64	  </div>
+        <!-- Markeringspunt 	G65	 -->	<div class="marker" style="left: 	73.0000%	; top: 	50.5000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G65	  </div>
+        <!-- Markeringspunt 	G66	 -->	<div class="marker" style="left: 	72.0000%	; top: 	51.8000%	;" data-tooltip="	Lonicera  Caerulea, Honingbes	" data-link="	G Lonicera  Caerulea Honingbes.htm	">	G66	  </div>
+        <!-- Markeringspunt 	H67	 -->	<div class="marker" style="left: 	35.6000%	; top: 	18.0000%	;" data-tooltip="	Juglans Regia, Walnoot	" data-link="	H Juglans Regia Walnoot.htm	">	H67	  </div>
+        <!-- Markeringspunt 	H68	 -->	<div class="marker" style="left: 	44.0000%	; top: 	39.0000%	;" data-tooltip="	Juglans Regia, Walnoot	" data-link="	H Juglans Regia Walnoot.htm	">	H68	  </div>
+        <!-- Markeringspunt 	H69	 -->	<div class="marker" style="left: 	61.0000%	; top: 	25.0000%	;" data-tooltip="	Juglans Regia, Walnoot	" data-link="	H Juglans Regia Walnoot.htm	">	H69	  </div>
+        <!-- Markeringspunt 	H70	 -->	<div class="marker" style="left: 	68.5000%	; top: 	49.0000%	;" data-tooltip="	Juglans Regia, Walnoot	" data-link="	H Juglans Regia Walnoot.htm	">	H70	  </div>
+        <!-- Markeringspunt 	H71	 -->	<div class="marker" style="left: 	78.0000%	; top: 	19.0000%	;" data-tooltip="	Juglans Regia, Walnoot	" data-link="	H Juglans Regia Walnoot.htm	">	H71	  </div>
+        <!-- Markeringspunt 	I72	 -->	<div class="marker" style="left: 	42.2000%	; top: 	18.0000%	;" data-tooltip="	Amelanchier, Krentenboom	" data-link="	I Amelanchier Krentenboom.htm	">	I72	  </div>
+        <!-- Markeringspunt 	I73	 -->	<div class="marker" style="left: 	51.0000%	; top: 	17.2000%	;" data-tooltip="	Amelanchier, Krentenboom	" data-link="	I Amelanchier Krentenboom.htm	">	I73	  </div>
+        <!-- Markeringspunt 	I74	 -->	<div class="marker" style="left: 	33.5000%	; top: 	23.0000%	;" data-tooltip="	Amelanchier, Krentenboom	" data-link="	I Amelanchier Krentenboom.htm	">	I74	  </div>
+        <!-- Markeringspunt 	I75	 -->	<div class="marker" style="left: 	39.2000%	; top: 	23.0000%	;" data-tooltip="	Amelanchier, Krentenboom	" data-link="	I Amelanchier Krentenboom.htm	">	I75	  </div>
+        <!-- Markeringspunt 	J76	 -->	<div class="marker" style="left: 	39.0000%	; top: 	53.9000%	;" data-tooltip="	Alnus glutinosa, Zwarte Els	" data-link="	J Alnus glutinosa Zwarte Els.htm	">	J76	  </div>
+        <!-- Markeringspunt 	J77	 -->	<div class="marker" style="left: 	43.0000%	; top: 	54.1750%	;" data-tooltip="	Alnus glutinosa, Zwarte Els	" data-link="	J Alnus glutinosa Zwarte Els.htm	">	J77	  </div>
+        <!-- Markeringspunt 	J78	 -->	<div class="marker" style="left: 	47.0000%	; top: 	54.4500%	;" data-tooltip="	Alnus glutinosa, Zwarte Els	" data-link="	J Alnus glutinosa Zwarte Els.htm	">	J78	  </div>
+        <!-- Markeringspunt 	J79	 -->	<div class="marker" style="left: 	51.0000%	; top: 	54.7250%	;" data-tooltip="	Alnus glutinosa, Zwarte Els	" data-link="	J Alnus glutinosa Zwarte Els.htm	">	J79	  </div>
+        <!-- Markeringspunt 	J80	 -->	<div class="marker" style="left: 	55.0000%	; top: 	55.0000%	;" data-tooltip="	Alnus glutinosa, Zwarte Els	" data-link="	J Alnus glutinosa Zwarte Els.htm	">	J80	  </div>
+        <!-- Markeringspunt 	K81	 -->	<div class="marker" style="left: 	48.0000%	; top: 	38.0000%	;" data-tooltip="	Rhamnus Frangula, Vuilboom	" data-link="	K Rhamnus Frangula Vuilboom.htm	">	K81	  </div>
+        <!-- Markeringspunt 	K82	 -->	<div class="marker" style="left: 	51.0000%	; top: 	33.0000%	;" data-tooltip="	Rhamnus Frangula, Vuilboom	" data-link="	K Rhamnus Frangula Vuilboom.htm	">	K82	  </div>
+        <!-- Markeringspunt 	K83	 -->	<div class="marker" style="left: 	51.0000%	; top: 	40.0000%	;" data-tooltip="	Rhamnus Frangula, Vuilboom	" data-link="	K Rhamnus Frangula Vuilboom.htm	">	K83	  </div>
+        <!-- Markeringspunt 	K84	 -->	<div class="marker" style="left: 	53.0000%	; top: 	23.0000%	;" data-tooltip="	Rhamnus Frangula, Vuilboom	" data-link="	K Rhamnus Frangula Vuilboom.htm	">	K84	  </div>
+        <!-- Markeringspunt 	K85	 -->	<div class="marker" style="left: 	55.0000%	; top: 	32.0000%	;" data-tooltip="	Rhamnus Frangula, Vuilboom	" data-link="	K Rhamnus Frangula Vuilboom.htm	">	K85	  </div>
+        <!-- Markeringspunt 	L86	 -->	<div class="marker" style="left: 	55.5000%	; top: 	35.5000%	;" data-tooltip="	Ficus Carica, Vijg	" data-link="	L Ficus Carica Vijg.htm	">	L86	  </div>
+        <!-- Markeringspunt 	L87	 -->	<div class="marker" style="left: 	55.0000%	; top: 	48.0000%	;" data-tooltip="	Ficus Carica, Vijg	" data-link="	L Ficus Carica Vijg.htm	">	L87	  </div>
+        <!-- Markeringspunt 	L88	 -->	<div class="marker" style="left: 	60.0000%	; top: 	41.3333%	;" data-tooltip="	Ficus Carica, Vijg	" data-link="	L Ficus Carica Vijg.htm	">	L88	  </div>
+        <!-- Markeringspunt 	L89	 -->	<div class="marker" style="left: 	65.0000%	; top: 	34.6667%	;" data-tooltip="	Ficus Carica, Vijg	" data-link="	L Ficus Carica Vijg.htm	">	L89	  </div>
+        <!-- Markeringspunt 	L90	 -->	<div class="marker" style="left: 	70.0000%	; top: 	28.0000%	;" data-tooltip="	Ficus Carica, Vijg	" data-link="	L Ficus Carica Vijg.htm	">	L90	  </div>
+        <!-- Markeringspunt 	M91	 -->	<div class="marker" style="left: 	60.0000%	; top: 	14.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M91	  </div>
+        <!-- Markeringspunt 	M92	 -->	<div class="marker" style="left: 	57.7500%	; top: 	16.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M92	  </div>
+        <!-- Markeringspunt 	M93	 -->	<div class="marker" style="left: 	36.0000%	; top: 	40.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M93	  </div>
+        <!-- Markeringspunt 	M94	 -->	<div class="marker" style="left: 	43.0000%	; top: 	33.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M94	  </div>
+        <!-- Markeringspunt 	M95	 -->	<div class="marker" style="left: 	60.0000%	; top: 	33.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M95	  </div>
+        <!-- Markeringspunt 	M96	 -->	<div class="marker" style="left: 	68.0000%	; top: 	38.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M96	  </div>
+        <!-- Markeringspunt 	M97	 -->	<div class="marker" style="left: 	10.0000%	; top: 	38.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M97	  </div>
+        <!-- Markeringspunt 	M98	 -->	<div class="marker" style="left: 	66.5000%	; top: 	25.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M98	  </div>
+        <!-- Markeringspunt 	M99	 -->	<div class="marker" style="left: 	78.0000%	; top: 	24.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M99	  </div>
+        <!-- Markeringspunt 	M100	 -->	<div class="marker" style="left: 	80.0000%	; top: 	30.0000%	;" data-tooltip="	Morus Alba, Witte Moerbei	" data-link="	M Morus Alba Witte Moerbei.htm	">	M100	  </div>
+        <!-- Markeringspunt 	N101	 -->	<div class="marker" style="left: 	62.0000%	; top: 	53.0000%	;" data-tooltip="	Mespilus Germanica, Mispel	" data-link="	N Mespilus Germanica Mispel.htm	">	N101	  </div>
+        <!-- Markeringspunt 	N102	 -->	<div class="marker" style="left: 	65.0000%	; top: 	53.0000%	;" data-tooltip="	Mespilus Germanica, Mispel	" data-link="	N Mespilus Germanica Mispel.htm	">	N102	  </div>
+        <!-- Markeringspunt 	N103	 -->	<div class="marker" style="left: 	75.0000%	; top: 	49.5000%	;" data-tooltip="	Mespilus Germanica, Mispel	" data-link="	N Mespilus Germanica Mispel.htm	">	N103	  </div>
+        <!-- Markeringspunt 	O104	 -->	<div class="marker" style="left: 	63.0000%	; top: 	13.7000%	;" data-tooltip="	Rosa rugosa, Japanse Bottelroos	" data-link="	O Rosa rugosa Japanse Bottelroos.htm	">	O104	  </div>
+        <!-- Markeringspunt 	O105	 -->	<div class="marker" style="left: 	65.2500%	; top: 	13.6250%	;" data-tooltip="	Rosa rugosa, Japanse Bottelroos	" data-link="	O Rosa rugosa Japanse Bottelroos.htm	">	O105	  </div>
+        <!-- Markeringspunt 	O106	 -->	<div class="marker" style="left: 	67.5000%	; top: 	13.5500%	;" data-tooltip="	Rosa rugosa, Japanse Bottelroos	" data-link="	O Rosa rugosa Japanse Bottelroos.htm	">	O106	  </div>
+        <!-- Markeringspunt 	O107	 -->	<div class="marker" style="left: 	69.7500%	; top: 	13.4750%	;" data-tooltip="	Rosa rugosa, Japanse Bottelroos	" data-link="	O Rosa rugosa Japanse Bottelroos.htm	">	O107	  </div>
+        <!-- Markeringspunt 	O108	 -->	<div class="marker" style="left: 	72.0000%	; top: 	13.4000%	;" data-tooltip="	Rosa rugosa, Japanse Bottelroos	" data-link="	O Rosa rugosa Japanse Bottelroos.htm	">	O108	  </div>
+        <!-- Markeringspunt 	P109	 -->	<div class="marker" style="left: 	42.0000%	; top: 	22.0000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P109	  </div>
+        <!-- Markeringspunt 	P110	 -->	<div class="marker" style="left: 	46.0000%	; top: 	24.0000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P110	  </div>
+        <!-- Markeringspunt 	P111	 -->	<div class="marker" style="left: 	50.0000%	; top: 	23.0000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P111	  </div>
+        <!-- Markeringspunt 	P112	 -->	<div class="marker" style="left: 	65.0000%	; top: 	18.0000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P112	  </div>
+        <!-- Markeringspunt 	P113	 -->	<div class="marker" style="left: 	68.0000%	; top: 	17.8000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P113	  </div>
+        <!-- Markeringspunt 	P114	 -->	<div class="marker" style="left: 	72.0000%	; top: 	17.7000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P114	  </div>
+        <!-- Markeringspunt 	P115	 -->	<div class="marker" style="left: 	70.0000%	; top: 	21.0000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P115	  </div>
+        <!-- Markeringspunt 	P116	 -->	<div class="marker" style="left: 	75.0000%	; top: 	25.0000%	;" data-tooltip="	Prunus Spinoza, Sleedoorn	" data-link="	P Prunus Spinoza Sleedoorn.htm	">	P116	  </div>
+        <!-- Markeringspunt 	Q117	 -->	<div class="marker" style="left: 	73.0000%	; top: 	30.0000%	;" data-tooltip="	Castanea Sativa, Tamme Kastanje	" data-link="	Q Castanea Sativa Tamme Kastanje.htm	">	Q117	  </div>
+        <!-- Markeringspunt 	Q118	 -->	<div class="marker" style="left: 	79.0000%	; top: 	40.0000%	;" data-tooltip="	Castanea Sativa, Tamme Kastanje	" data-link="	Q Castanea Sativa Tamme Kastanje.htm	">	Q118	  </div>
+        <!-- Markeringspunt 	R119	 -->	<div class="marker" style="left: 	75.9800%	; top: 	13.1750%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R119	  </div>
+        <!-- Markeringspunt 	R120	 -->	<div class="marker" style="left: 	78.0440%	; top: 	13.0063%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R120	  </div>
+        <!-- Markeringspunt 	R121	 -->	<div class="marker" style="left: 	80.1080%	; top: 	12.8375%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R121	  </div>
+        <!-- Markeringspunt 	R122	 -->	<div class="marker" style="left: 	82.1720%	; top: 	12.6688%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R122	  </div>
+        <!-- Markeringspunt 	R123	 -->	<div class="marker" style="left: 	84.2360%	; top: 	12.5000%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R123	  </div>
+        <!-- Markeringspunt 	R124	 -->	<div class="marker" style="left: 	86.3000%	; top: 	13.5000%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R124	  </div>
+        <!-- Markeringspunt 	R125	 -->	<div class="marker" style="left: 	84.2360%	; top: 	16.0000%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R125	  </div>
+        <!-- Markeringspunt 	R126	 -->	<div class="marker" style="left: 	88.0000%	; top: 	16.5000%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R126	  </div>
+        <!-- Markeringspunt 	R127	 -->	<div class="marker" style="left: 	88.0000%	; top: 	20.2500%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R127	  </div>
+        <!-- Markeringspunt 	R128	 -->	<div class="marker" style="left: 	88.0000%	; top: 	24.0000%	;" data-tooltip="	Chaenomeles japonica, Japanse Kwee	" data-link="	R Chaenomeles japonica Japanse Kwee.htm	">	R128	  </div>
+        <!-- Markeringspunt 	S129	 -->	<div class="marker" style="left: 	60.3000%	; top: 	20.2500%	;" data-tooltip="	Elaeagnus umbellatus, Olijfwilg	" data-link="	S Elaeagnus umbellatus Olijfwilg.htm	">	S129	  </div>
+        <!-- Markeringspunt 	S130	 -->	<div class="marker" style="left: 	83.0000%	; top: 	20.2500%	;" data-tooltip="	Elaeagnus umbellatus, Olijfwilg	" data-link="	S Elaeagnus umbellatus Olijfwilg.htm	">	S130	  </div>
+        <!-- Markeringspunt 	S131	 -->	<div class="marker" style="left: 	82.0000%	; top: 	24.0000%	;" data-tooltip="	Elaeagnus umbellatus, Olijfwilg	" data-link="	S Elaeagnus umbellatus Olijfwilg.htm	">	S131	  </div>
+        <!-- Markeringspunt 	S132	 -->	<div class="marker" style="left: 	83.0000%	; top: 	29.0000%	;" data-tooltip="	Elaeagnus umbellatus, Olijfwilg	" data-link="	S Elaeagnus umbellatus Olijfwilg.htm	">	S132	  </div>
+        <!-- Markeringspunt 	S133	 -->	<div class="marker" style="left: 	83.0000%	; top: 	33.0000%	;" data-tooltip="	Elaeagnus umbellatus, Olijfwilg	" data-link="	S Elaeagnus umbellatus Olijfwilg.htm	">	S133	  </div>
+        <!-- Markeringspunt 	S134	 -->	<div class="marker" style="left: 	87.8000%	; top: 	35.0000%	;" data-tooltip="	Elaeagnus umbellatus, Olijfwilg	" data-link="	S Elaeagnus umbellatus Olijfwilg.htm	">	S134	  </div>
+        <!-- Markeringspunt 	T135	 -->	<div class="marker" style="left: 	88.0000%	; top: 	39.5000%	;" data-tooltip="	Euonymus europaeus, Kardinaalsmuts	" data-link="	T Euonymus europaeus Kardinaalsmuts.htm	">	T135	  </div>
+        <!-- Markeringspunt 	T136	 -->	<div class="marker" style="left: 	88.0000%	; top: 	43.6250%	;" data-tooltip="	Euonymus europaeus, Kardinaalsmuts	" data-link="	T Euonymus europaeus Kardinaalsmuts.htm	">	T136	  </div>
+        <!-- Markeringspunt 	T137	 -->	<div class="marker" style="left: 	88.0000%	; top: 	47.7500%	;" data-tooltip="	Euonymus europaeus, Kardinaalsmuts	" data-link="	T Euonymus europaeus Kardinaalsmuts.htm	">	T137	  </div>
+        <!-- Markeringspunt 	T138	 -->	<div class="marker" style="left: 	88.0000%	; top: 	51.8750%	;" data-tooltip="	Euonymus europaeus, Kardinaalsmuts	" data-link="	T Euonymus europaeus Kardinaalsmuts.htm	">	T138	  </div>
+        <!-- Markeringspunt 	T139	 -->	<div class="marker" style="left: 	88.0000%	; top: 	56.0000%	;" data-tooltip="	Euonymus europaeus, Kardinaalsmuts	" data-link="	T Euonymus europaeus Kardinaalsmuts.htm	">	T139	  </div>
+        <!-- Markeringspunt 	U140	 -->	<div class="marker" style="left: 	78.0000%	; top: 	48.0000%	;" data-tooltip="	Crataegus monogyna, Meidoorn	" data-link="	U Crataegus monogyna Meidoorn.htm	">	U140	  </div>
+        <!-- Markeringspunt 	U141	 -->	<div class="marker" style="left: 	78.0000%	; top: 	51.0000%	;" data-tooltip="	Crataegus monogyna, Meidoorn	" data-link="	U Crataegus monogyna Meidoorn.htm	">	U141	  </div>
+        <!-- Markeringspunt 	U142	 -->	<div class="marker" style="left: 	80.0000%	; top: 	51.0000%	;" data-tooltip="	Crataegus monogyna, Meidoorn	" data-link="	U Crataegus monogyna Meidoorn.htm	">	U142	  </div>
+        <!-- Markeringspunt 	U143	 -->	<div class="marker" style="left: 	78.0000%	; top: 	54.0000%	;" data-tooltip="	Crataegus monogyna, Meidoorn	" data-link="	U Crataegus monogyna Meidoorn.htm	">	U143	  </div>
+        <!-- Markeringspunt 	U144	 -->	<div class="marker" style="left: 	80.0000%	; top: 	54.0000%	;" data-tooltip="	Crataegus monogyna, Meidoorn	" data-link="	U Crataegus monogyna Meidoorn.htm	">	U144	  </div>
+
+
+
+
+
+  
+
+
+      <!-- Je kunt meer markeringspunten toevoegen door meer div-elementen toe te voegen met de class "marker" en verschillende "left" en "top" waarden -->
+        
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip">
+            <span id="tooltipLocation" class="tooltip-location"></span>
+            <a id="tooltipLink" class="tooltip-link" href="#" target="_blank"></a>
+        </div>
+    </div>
+
+
+
+  
+<!-- JavaScript voor tooltips -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const markers = document.querySelectorAll('.marker');
+            const tooltip = document.getElementById('tooltip');
+            const tooltipLink = document.getElementById('tooltipLink');
+            const tooltipLocation = document.getElementById('tooltipLocation');
+            let tooltipTimeout;
+
+            markers.forEach(marker => {
+                marker.addEventListener('mouseenter', (e) => {
+                    const markerRect = marker.getBoundingClientRect();
+
+                    tooltip.style.top = `${marker.offsetTop}px`;
+                    tooltip.style.left = `${marker.offsetLeft + marker.offsetWidth}px`;
+                    tooltip.style.opacity = 1;
+
+                    tooltipLocation.textContent = marker.getAttribute('data-tooltip');
+
+                    // Plaats de link naast de tooltip
+                    tooltipLink.style.top = `${marker.offsetTop}px`;
+                    tooltipLink.style.left = `${marker.offsetLeft + marker.offsetWidth + tooltip.offsetWidth}px`;
+                    tooltipLink.href = marker.getAttribute('data-link'); // Stel de link van de tooltip in op basis van de data-link attribuut van de marker
+                    clearTimeout(tooltipTimeout); // Stop de timer voor het verbergen van de tooltip als de muis weer op de marker komt
+                });
+
+                marker.addEventListener('mouseleave', () => {
+                    tooltipTimeout = setTimeout(() => {
+                        tooltip.style.opacity = 0;
+                    }, 1000); // Verberg de tooltip na 1 seconde
+                });
+            });
+
+            // Houd de tooltip zichtbaar als de muis zich binnen de tooltip bevindt
+            tooltip.addEventListener('mouseenter', () => {
+                clearTimeout(tooltipTimeout); // Stop de timer voor het verbergen van de tooltip
+            });
+
+            // Verberg de tooltip als de muis de tooltip verlaat
+            tooltip.addEventListener('mouseleave', () => {
+                tooltipTimeout = setTimeout(() => {
+                    tooltip.style.opacity = 0;
+                }, 1000); // Verberg de tooltip na 1 seconde
+            });
+        });
+    </script>
+</body>
+</html>
